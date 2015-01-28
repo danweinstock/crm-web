@@ -1,11 +1,13 @@
 require 'sinatra'
+require "sinatra/reloader"
 require './contact'
 require	'./rolodex'
+
 
 $rolodex= Rolodex.new
 
 get '/' do
-	@crm_name = "My CRM"
+	@crm_name = "Dan Weinstock's CRM"
   erb :index
 end
 
