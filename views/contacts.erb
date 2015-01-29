@@ -2,12 +2,20 @@
 
 		<ol>
 			<% @contacts.each do |contact| %>
-			<li><strong>First Name</strong>: <%= contact.first_name %>
-			 <strong>Last Name</strong>: <%= contact.last_name %>
-			 <strong>E-mail</strong>: <%= contact.email %>
-			 <strong>Note</strong>: <%= contact.note %></li>
+				<li><strong>First Name</strong>: <%= contact.first_name %>
+				<strong>Last Name</strong>: <%= contact.last_name %>
+				<strong>E-mail</strong>: <%= contact.email %>
+				<strong>Note</strong>: <%= contact.note %></li>
+				<button type="submit" class="btn">
+					<h3><a href="/contacts/<%= contact.id %>/edit">Edit</a></h3>
+				</button>
+				<form action="/contacts/<%= contact.id %>" method="post">
+  					<input type="hidden" name="_method" value="delete">
+ 						 <input type="submit" value="Delete Contact">
+				</form>
 			<% end %>
-			</ol>
+		</ol>
+
 			<ul>
 			<li>
         <a href="/contacts/new">Add a contact</a>

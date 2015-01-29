@@ -70,9 +70,11 @@ body {
 	background: url(../Alien_Ink.jpg) no-repeat fixed;
 	background-size: cover;
 }
-a:hover{color:green;}
-a:visited{color: white;}
 
+
+.contact {
+	color: 
+}
 .new-contact-form div {
 	margin-bottom: 0.2em;
 	display: block;
