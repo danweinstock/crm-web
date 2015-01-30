@@ -1,4 +1,12 @@
-	<h1>Contacts</h1>
+	<h1>All Contacts</h1>
+
+
+	<ul>
+				<li class="chng"><a href="/contacts/new">Add a contact</a></li>
+        <li class="chng"><a href="/">Home</a></li>
+     
+  </ul>
+
 
 		<ol>
 			<% @contacts.each do |contact| %>
@@ -9,16 +17,12 @@
 				<button type="submit" class="btn">
 					<h3><a href="/contacts/<%= contact.id %>/edit">Edit</a></h3>
 				</button>
-				<form action="/contacts/<%= contact.id %>" method="post">
+				<form action="/contacts/<%= contact.id %>" method="post" class="btn">
   					<input type="hidden" name="_method" value="delete">
  						 <input type="submit" value="Delete Contact">
 				</form>
-			<% end %>
+				<% end %>
+			
 		</ol>
 
-			<ul>
-			<li>
-        <a href="/contacts/new">Add a contact</a>
-        <a href="/">Home</a>
-      </li>
-      </ul>
+			
